@@ -16,8 +16,8 @@ export default function Home() {
       <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-8">
         {/* Hero Section */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          <div className="lg:col-span-2 relative group rounded-2xl overflow-hidden ring-1 ring-gray-100 shadow-sm transition-shadow hover:shadow-lg">
-            <ArticleCard article={featured} layout="featured" className="h-[500px]" />
+          <div className="lg:col-span-2 relative group rounded-2xl overflow-hidden ring-1 ring-gray-100 shadow-sm transition-shadow hover:shadow-lg bg-white h-full flex flex-col">
+            <ArticleCard article={featured} layout="featured" className="h-full flex-1" />
           </div>
           <div className="flex flex-col gap-6">
             <SectionTitle title="Trending Now" />

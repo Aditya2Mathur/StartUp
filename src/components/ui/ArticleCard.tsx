@@ -22,11 +22,11 @@ export default function ArticleCard({ article, layout = "grid", className }: Art
         className
       )}
     >
-      {/* 1. Image at the top (LinkedIn Landscape Ratio to show full image) */}
+      {/* 1. Image at the top */}
       <div
         className={clsx(
-          "relative overflow-hidden bg-gray-50 border-b border-gray-100 w-full flex items-center justify-center aspect-[1.91/1]",
-          isFeatured ? "" : isList ? "sm:w-1/3 sm:shrink-0 sm:border-b-0 sm:border-r" : ""
+          "relative overflow-hidden bg-gray-50 border-b border-gray-100 w-full flex items-center justify-center",
+          isFeatured ? "aspect-video" : isList ? "aspect-[3/4] sm:w-1/3 sm:shrink-0 sm:border-b-0 sm:border-r" : "aspect-[3/4]"
         )}
       >
         <Link href={`/article/${article.slug}`} className="absolute inset-0 z-10">
@@ -36,7 +36,7 @@ export default function ArticleCard({ article, layout = "grid", className }: Art
           src={article.image}
           alt={article.title}
           fill
-          className="object-contain transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
         />
         {/* Category Badge over image */}
