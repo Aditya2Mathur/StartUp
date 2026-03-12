@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 export default function Home() {
   const featured = getFeaturedArticle();
   const trending = getTrendingArticles();
-  const latest = getLatestArticles(4);
+  const latest = getLatestArticles(8);
   const startupNews = getArticlesByCategory("startup-news").slice(0, 3);
   const founderJourneys = getArticlesByCategory("founder-journeys").slice(0, 3);
   
