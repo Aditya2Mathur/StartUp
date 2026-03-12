@@ -9,11 +9,9 @@ import clsx from "clsx";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "Startup News", href: "/category/startup-news" },
-  { name: "Founder Journeys", href: "/category/founder-journeys" },
-  { name: "Business Breakdowns", href: "/category/business-breakdowns" },
-  { name: "Finance Simplified", href: "/category/finance-simplified" },
-  { name: "Daily Trends", href: "/category/daily-trends" },
-  { name: "About", href: "/about" },
+  { name: "Funding Update", href: "/category/funding-update" },
+  { name: "Founder Stories", href: "/category/founder-stories" },
+  { name: "PR Consultancy", href: "/category/pr-consultancy" },
 ];
 
 export default function Navbar() {

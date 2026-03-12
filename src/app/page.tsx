@@ -9,7 +9,7 @@ export default function Home() {
   const trending = getTrendingArticles();
   const latest = getLatestArticles(8);
   const startupNews = getArticlesByCategory("startup-news").slice(0, 3);
-  const founderJourneys = getArticlesByCategory("founder-journeys").slice(0, 3);
+  const founderStories = getArticlesByCategory("founder-stories").slice(0, 3);
   
   return (
     <div className="bg-gray-50 pb-24">
@@ -55,14 +55,14 @@ export default function Home() {
           </section>
           
           <section>
-            <SectionTitle title="Founder Journeys" viewAllLink="/category/founder-journeys" />
+            <SectionTitle title="Founder Stories" viewAllLink="/category/founder-stories" />
             <div className="flex flex-col gap-6">
-              {founderJourneys.length > 0 ? (
-                founderJourneys.map(article => (
+              {founderStories.length > 0 ? (
+                founderStories.map(article => (
                   <ArticleCard key={article.id} article={article} layout="list" />
                 ))
               ) : (
-                <p className="text-gray-500 italic">More journeys coming soon...</p>
+                <p className="text-gray-500 italic">More stories coming soon...</p>
               )}
             </div>
           </section>
